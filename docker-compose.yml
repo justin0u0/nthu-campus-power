@@ -17,6 +17,9 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
   nthu-campus-power:
     image: nthu-campus-power:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: nthu-campus-power
     ports:
       - 2112:2112
